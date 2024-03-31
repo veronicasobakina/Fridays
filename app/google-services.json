@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "650564061033",
+    "project_id": "friday2-f903c",
+    "storage_bucket": "friday2-f903c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:650564061033:android:5ac0f65536c721703adff8",
+        "android_client_info": {
+          "package_name": "com.example.friday"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATYyTBXnMYu3-EPp9x-Sppnf4ktrH1s7o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/cart_background"
+
+    android:elevation="3dp">
+
+
+    <ImageView
+        android:id="@+id/picCart1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pizza" />
+
+    <TextView
+        android:id="@+id/titleTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:text="Название"
+        android:textColor="#373b54"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/picCart1"
+        app:layout_constraintTop_toTopOf="@+id/picCart1" />
+
+    <ImageView
+        android:id="@+id/minusCartBtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/picCart1"
+        app:layout_constraintStart_toStartOf="@+id/titleTxt"
+        app:srcCompat="@drawable/minus2" />
+
+    <TextView
+        android:id="@+id/numberItemTxt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="1"
+        android:textColor="#373b54"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/minusCartBtn1"
+        app:layout_constraintStart_toEndOf="@+id/minusCartBtn1"
+        app:layout_constraintTop_toTopOf="@+id/minusCartBtn1" />
+
+    <ImageView
+        android:id="@+id/plusCartBtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/minusCartBtn1"
+        app:layout_constraintStart_toEndOf="@+id/numberItemTxt1"
+        app:layout_constraintTop_toTopOf="@+id/minusCartBtn1"
+        app:srcCompat="@drawable/plus3" />
+
+    <TextView
+        android:id="@+id/feeEachItem1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="0"
+        android:textColor="#373b54"
+        android:textSize="16sp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/titleTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/titleTxt" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text=""
+        android:textColor="#ff3d00"
+        app:layout_constraintBottom_toBottomOf="@+id/feeEachItem1"
+        app:layout_constraintEnd_toStartOf="@+id/feeEachItem1"
+        app:layout_constraintTop_toTopOf="@+id/feeEachItem1" />
+
+    <TextView
+        android:id="@+id/totalEachItem2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="#373b54"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/plusCartBtn1"
+        app:layout_constraintEnd_toEndOf="@+id/feeEachItem1"
+        app:layout_constraintTop_toTopOf="@+id/plusCartBtn1" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text=""
+        android:textColor="#ff3d00"
+        app:layout_constraintBottom_toBottomOf="@+id/totalEachItem2"
+        app:layout_constraintEnd_toStartOf="@+id/totalEachItem2"
+        app:layout_constraintTop_toTopOf="@+id/totalEachItem2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
