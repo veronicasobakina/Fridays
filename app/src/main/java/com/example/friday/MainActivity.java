@@ -7,7 +7,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.friday.Activity.CartListActivity;
 import com.example.friday.Adaptor.PopluarAdaptor;
@@ -28,9 +31,48 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recyclerViewCategory();
+
         recyclerViewPopular();
         BottomNavigation();
+
+
+
+        LinearLayout button = findViewById(R.id.Profile_Btn1);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MessageActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout button1 = findViewById(R.id.Support_Btn);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MessageActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout button2 = findViewById(R.id.Setting_Btn);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MessageActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        TextView button3 = findViewById(R.id.textView8);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CartListActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void BottomNavigation() {
@@ -47,25 +89,12 @@ public class MainActivity extends AppCompatActivity {
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, MainActivity.class));
+                startActivity(new Intent(MainActivity.this, MessageActivity.class));
             }
         });
     }
 
-    private void recyclerViewCategory() {
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
-        recyclerViewCategoryList = findViewById(R.id.recyclerView);
-        recyclerViewCategoryList.setLayoutManager(linearLayoutManager);
 
-        ArrayList<CategoryDomain> category = new ArrayList<>();
-        category.add((new CategoryDomain("Пицца", "cat_1")));
-        category.add((new CategoryDomain("Суши", "cat_2")));
-        category.add((new CategoryDomain("Напитки", "cat_3")));
-        category.add((new CategoryDomain("Другое", "cat_4")));
-
-        adapter = new CategoryAdaptor(category);
-        recyclerViewCategoryList.setAdapter(adapter);
-    }
 
     private void recyclerViewPopular() {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
@@ -87,4 +116,5 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 }

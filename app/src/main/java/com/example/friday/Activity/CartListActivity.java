@@ -16,6 +16,7 @@ import com.example.friday.Adaptor.CategoryAdaptor;
 import com.example.friday.Helper.ManagementCart;
 import com.example.friday.Interface.ChangeNumberItemsListener;
 import com.example.friday.MainActivity;
+import com.example.friday.MessageActivity;
 import com.example.friday.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -39,6 +40,43 @@ public class CartListActivity extends AppCompatActivity {
         CalculateCart();
         BottomNavigation();
 
+
+
+        LinearLayout button = findViewById(R.id.Profile_Btn);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CartListActivity.this, MessageActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout button1 = findViewById(R.id.Support_Btn);
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CartListActivity.this, MessageActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout button2 = findViewById(R.id.Setting_Btn);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CartListActivity.this, MessageActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        TextView button3 = findViewById(R.id.textView16);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CartListActivity.this, MessageActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void BottomNavigation() {
@@ -48,19 +86,19 @@ public class CartListActivity extends AppCompatActivity {
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(CartListActivity.this, CartListActivity.class));
+                startActivity(new Intent(CartListActivity.this, MessageActivity.class));
             }
         });
         homeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(CartListActivity.this, MainActivity.class));
+                startActivity(new Intent(CartListActivity.this, MessageActivity.class));
             }
         });
     }
 
     private void initView() {
-        recyclerViewList = findViewById(R.id.recyclerView);
+        recyclerViewList = findViewById(R.id.recyclerView2);
         totalFeeTxt = findViewById(R.id.totalFeeTxt);
 
         deliveryTxt = findViewById(R.id.deliveryTxt);
